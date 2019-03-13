@@ -7,10 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "angular": "1.7.x",
+    "angular-file-upload": "^2.5.0",
     "angular-route": "1.7.x",
     "bootstrap": "3.3.x",
-    "angular-file-upload": "^2.5.0",
-    "jquery": "3.3.x"
+    "express": "^4.16.4",
+    "jquery": "3.3.x",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "angular-mocks": "1.7.x",
@@ -24,18 +26,16 @@
     "protractor": "^5.4.1"
   },
   "scripts": {
-    "postinstall": "npm run copy-libs",
-    "update-deps": "npm update",
-    "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
-    "prestart": "npm install",
-    "start": "http-server ./app -a localhost -p 8000 -c-1",
-    "pretest": "npm install",
-    "test": "karma start karma.conf.js",
-    "test-single-run": "npm test -- --single-run",
-    "preupdate-webdriver": "npm install",
-    "update-webdriver": "webdriver-manager update",
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-tests/protractor.conf.js"
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
   }
 }
