@@ -1,7 +1,7 @@
 {
   "name": "leniolabs-fileupload",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Aplicacion front-end para subir archivos",
   "repository": "https://github.com/pedrohhinestroza/leniolabs-file-upload",
   "license": "MIT",
