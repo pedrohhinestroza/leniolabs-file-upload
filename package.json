@@ -1,17 +1,14 @@
 {
-  "name": "leniolabs-file-upload-app",
+  "name": "leniolabs-fileupload",
   "private": true,
-  "version": "0.0.1",
-  "description": "Aplicacion para lenioLabs de modelo de subir archivos",
+  "version": "0.0.0",
+  "description": "Aplicacion front-end para subir archivos",
   "repository": "https://github.com/pedrohhinestroza/leniolabs-file-upload",
   "license": "MIT",
   "dependencies": {
     "angular": "1.7.x",
-    "angular-animate": "1.7.x",
-    "angular-resource": "1.7.x",
-    "angular-route": "1.7.x",
-    "bootstrap": "3.3.x",
-    "jquery": "3.3.x"
+    "angular-file-upload": "^2.5.0",
+    "bootstrap": "3.3.x"
   },
   "devDependencies": {
     "angular-mocks": "1.7.x",
@@ -28,7 +25,7 @@
     "postinstall": "npm run copy-libs",
     "update-deps": "npm update",
     "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist}/**/*\" app/lib -C",
     "prestart": "npm install",
     "start": "http-server ./app -a localhost -p 8000 -c-1",
     "pretest": "npm install",
