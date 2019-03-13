@@ -5,6 +5,7 @@
   "description": "Application for leniolabs to upload files",
   "repository": "https://github.com/pedrohhinestroza/leniolabs-file-upload",
   "license": "MIT",
+  "main": "server.js",
   "dependencies": {
     "angular": "1.7.x",
     "angular-file-upload": "^2.5.0",
@@ -12,9 +13,7 @@
     "bootstrap": "3.3.x",
     "express": "^4.16.4",
     "jquery": "3.3.x",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
+    "path": "^0.12.7",
     "angular-mocks": "1.7.x",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
@@ -25,8 +24,9 @@
     "karma-jasmine": "^1.1.2",
     "protractor": "^5.4.1"
   },
+  "devDependencies": {},
   "scripts": {
-    "prestart": "npm install",
+    "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
