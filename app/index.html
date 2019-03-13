@@ -1,25 +1,32 @@
 <!doctype html>
-<html lang="es" ng-app="fileUploadModule">
-<head>
+<!--Modulo principal para subir los archivos-->
+<html lang="en" ng-app="LenioLabsFileUploadApp">
+  <head>
     <meta charset="utf-8">
-    <title>Leniolabs fileuploader</title>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="app.css"/>
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
     <link rel="shortcut icon" href="favicon.ico" />
+
+    <!--Dependencies-->
+    <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="lib/angular-file-upload/dist/angular-file-upload.min.js"></script>
-    <script src="app.config.js"></script>
     <script src="app.module.js"></script>
-    <script src="components/fileupload-controller.component.js"></script>
-</head>
-<body>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/checkmark/checkmark.filter.js"></script>
+    <script src="core/phone/phone.module.js"></script>
+    <script src="core/phone/phone.service.js"></script>
+    <script src="fileupload-component/fileupload.module.js"></script>
+    <script src="fileupload-component/fileupload.component.js"></script>
+  </head>
+  <body>
 
-<div class="view-container">
-    <div ng-view class="view-frame"></div>
-</div>
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
 
-<!--<file-upload></file-upload>-->
-
-</body>
+  </body>
 </html>

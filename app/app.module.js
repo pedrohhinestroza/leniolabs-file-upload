@@ -1,8 +1,8 @@
 'use strict';
 
-// Define the `fileUploadModule` module
-angular.module('fileUploadModule', [
-    'ngRoute',
-    'angularFileUpload',
-    'fileUpload'
+// Define the `LenioLabsFileUploadApp` module and imports dependency of angularFileUpload that manage file upload
+angular.module('LenioLabsFileUploadApp', [
+  'ngRoute',
+  'fileUpload',
+  'angularFileUpload'
 ]);
