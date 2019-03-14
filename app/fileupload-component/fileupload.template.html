@@ -12,11 +12,11 @@
 
     <div class="col-md-12" align="center">
 
-      <h3>Seleccionar archivos</h3>
+      <h3>Select files to upload</h3>
 
       <div ng-show="uploader.isHTML5">
         <div class="well my-drop-zone" nv-file-over="" uploader="uploader">
-          Suelta los archivos aqui
+          Drop file zone
         </div>
       </div>
 
@@ -35,16 +35,16 @@
   <div class="row">
     <div class="col-md-12" align="center">
 
-      <h3>Cola de subida</h3>
-      <p>cantidad de archivos a subir: {{ uploader.queue.length }}</p>
+      <h3>Upload queue</h3>
+      <p>Upload length of files: {{ uploader.queue.length }}</p>
 
       <table class="table">
         <thead>
         <tr>
-          <th width="50%">Nombre de archivo</th>
-          <th ng-show="uploader.isHTML5">Tamaño</th>
-          <th>Estado</th>
-          <th>Acciones</th>
+          <th width="50%">Name</th>
+          <th ng-show="uploader.isHTML5">Size</th>
+          <th>Status</th>
+          <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -59,14 +59,14 @@
           <td nowrap>
             <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()"
                     ng-disabled="item.isReady || item.isUploading || item.isSuccess">
-              <span class="glyphicon glyphicon-upload"></span> Subir
+              <span class="glyphicon glyphicon-upload"></span> Upload
             </button>
             <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()"
                     ng-disabled="!item.isUploading">
-              <span class="glyphicon glyphicon-ban-circle"></span> Cancelar
+              <span class="glyphicon glyphicon-ban-circle"></span> Cancell
             </button>
             <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
-              <span class="glyphicon glyphicon-trash"></span> Remover
+              <span class="glyphicon glyphicon-trash"></span> Remove
             </button>
           </td>
         </tr>
@@ -75,7 +75,7 @@
 
       <div>
         <div>
-          Linea de progreso:
+          Progress Line:
           <div class="progress" style="">
             <div class="progress-bar" role="progressbar"
                  ng-style="{ 'width': uploader.progress + '%' }"></div>
@@ -83,15 +83,15 @@
         </div>
         <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()"
                 ng-disabled="!uploader.getNotUploadedItems().length">
-          <span class="glyphicon glyphicon-upload"></span> Subir todos
+          <span class="glyphicon glyphicon-upload"></span> Upload All
         </button>
         <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()"
                 ng-disabled="!uploader.isUploading">
-          <span class="glyphicon glyphicon-ban-circle"></span> Cancelar Todos
+          <span class="glyphicon glyphicon-ban-circle"></span> Cancell All
         </button>
         <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()"
                 ng-disabled="!uploader.queue.length">
-          <span class="glyphicon glyphicon-trash"></span> Remover todos
+          <span class="glyphicon glyphicon-trash"></span> Remove All
         </button>
       </div>
     </div>
